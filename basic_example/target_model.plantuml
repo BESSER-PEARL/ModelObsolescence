@@ -1,0 +1,23 @@
+@startuml
+skinparam groupInheritance 2
+
+class Library {
++ name: str
++ address: str
+}
+
+class Book extends Library{
++ tittle: str
++ pages: int
++ release: date
+}
+
+class Author {
++ name: str
++ email: str 
+}
+
+Book "*" -- "1..*" Author: writedBy
+Library "1" -- "*" Book: has
+
+@enduml
