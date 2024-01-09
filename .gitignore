@@ -1,0 +1,17 @@
+__pycache__/
+
+# pipenv
+Pipfile
+Pipfile.lock
+
+# package
+/dist/
+buml.egg-info/
+
+# Sphinx documentation
+docs/_build/
+
+# Build
+build
+# ANTLR
+**/.antlr/**
