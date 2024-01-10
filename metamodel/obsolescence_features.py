@@ -1,9 +1,8 @@
 from BUML.metamodel.structural import NamedElement, DomainModel, Class
-from enum import Enum
 import datetime
 
 class Change(NamedElement):
-    def __init__(self, name: str, timestamp: datetime):
+    def __init__(self, name: str, timestamp: datetime = datetime.datetime.now()):
         super().__init__(name)
         self.timestamp = timestamp
 
@@ -16,7 +15,7 @@ class Change(NamedElement):
         self.__timestamp = timestamp
 
 class Revision(NamedElement):
-    def __init__(self, name: str, reviewer: str, timestamp: datetime):
+    def __init__(self, name: str, reviewer: str, timestamp: datetime = datetime.datetime.now()):
         super().__init__(name)
         self.reviewer = reviewer
         self.timestamp = timestamp
@@ -61,7 +60,7 @@ def revision_history(self, revision_history: set[Revision]):
 def add_revision(self, revision: Revision):
     self.revisions.add(revision)
 
-#--Update any object with obsolescence properties and methods
+#--Enable obsolescence properties and methods for a specific object or class
 def enable_obsolescence_artifact(artifact:any):
     artifact.obsolete: float = 0
     artifact.changes: set[Change] = set()
@@ -69,18 +68,13 @@ def enable_obsolescence_artifact(artifact:any):
     artifact.change_history = change_history
     artifact.revision_history = revision_history
     artifact.add_change = add_change
-    artifact.add_revision = add_change
+    artifact.add_revision = add_revision
 
-#--Update model with obsolescence properties and methods
-def enable_obsolescence_model(model: DomainModel):
-    for cl in DomainModel.get_classes:
-        enable_obsolescence_artifact(artifact=cl)
-
-#--Update any object with obsolescence properties and methods
+#--Enable obsolescence properties and methods
 def enable_obsolescence():
     enable_obsolescence_artifact(artifact=Class)
 
-#--Update any object with obsolescence properties and methods
+#--Disable obsolescence properties and methods for a specific object or class
 def disable_obsolescence_artifact(artifact:any):
     del artifact.changes
     del artifact.revisions
@@ -89,11 +83,6 @@ def disable_obsolescence_artifact(artifact:any):
     del artifact.add_change
     del artifact.add_revision
 
-#--Update model with obsolescence properties and methods
-def disable_obsolescence_model(model: DomainModel):
-    for cl in DomainModel.get_classes:
-        disable_obsolescence_artifact(artifact=cl)
-
-#--Update any object with obsolescence properties and methods
+#--Disable obsolescence properties and methods
 def disable_obsolescence():
     disable_obsolescence_artifact(artifact=Class)
