@@ -2,23 +2,22 @@
 import sys
 sys.path.append("../")
 
-from grammar import Obsolescence
+from grammar import obsolescence_declaration
 from BUML.notations.plantUML import plantuml_to_buml
-from BUML.metamodel.structural import DomainModel
+from BUML.metamodel.structural import DomainModel, Class
+from metamodel import ObsolescenceDeclaration, Change, Revision
+from runtime_engine import check_obsolescence
 
 #PlantUML to BUML using ANTLR
 modeltest: DomainModel = plantuml_to_buml(plantUML_model_path='target_model.plantuml')
 
 # Obsolescence declaration
-obsolescence: Obsolescence = Obsolescence(obsolescence_rules="obsolescence_declaration.txt", buml_model=modeltest)
-obs_model = obsolescence.generate_obsolescence_model()
+obs_model: ObsolescenceDeclaration = obsolescence_declaration(obsolescence_rules="obsolescence_declaration.txt", buml_model=modeltest)
 
-# Access obsolescence model
-# obs_model = obsolescence.obsolescence_model
+# Add a change to the Book class
+book_change = Change(name="an attribute updated")
+book = modeltest.get_class_by_name(class_name="Book")
+book.add_change(change=book_change)
 
-for obs_dec in obs_model.obs_declarations:
-    print("\nRule: " + obs_dec.name)
-    for impact in obs_dec.impacts:
-        for element in impact.elements:
-            print("\t Element: " + element.name + "\ttype: " + str(type(element)))
-            #print(type(element))
+# check model obsolescence
+check_obsolescence(obsolescence_declaration=obs_model, buml_model=obs_model)

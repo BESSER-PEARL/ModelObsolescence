@@ -1,12 +1,4 @@
 Model TestModel:
-    internal_obs (criticality=Warning, confidence=90, date=15/06/2023) rule = "Rule Test" {
-        impacts:
-            -> elements: Class Library
-               impact: 50
-               propagation: 2
-               impact loss: 10
-    }
-
     temp_fixed (criticality=Warning, confidence=90, date=15/06/2023) expires = until 15/12/2024 {
         impacts:
             -> elements: Class Book
@@ -19,26 +11,6 @@ Model TestModel:
         impacts:
             -> elements: Class Book
                impact: 50
-               propagation: 2
-               impact loss: 10
-    }
-
-    data_obs (criticality=Warning, confidence=90, date=15/06/2023) discrepancy = 50 {
-        impacts:
-            -> elements: Class Author
-               impact: 50
-               propagation: 2
-               impact loss: 10
-    }
-
-    manual (criticality=Warning, confidence=90, date=15/06/2023) {
-        impacts:
-            -> elements: Class Book Class Library
-               impact: 50
-               propagation: 2
-               impact loss: 10
-            -> elements: Class Book
-               impact: 30
                propagation: 2
                impact loss: 10
     }

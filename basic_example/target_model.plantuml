@@ -6,7 +6,7 @@ class Library {
 + address: str
 }
 
-class Book extends Library{
+class Book{
 + tittle: str
 + pages: int
 + release: date
