@@ -14,7 +14,7 @@ class ModelCreationListener(ObsolescenceListener):
 
     def enterObsolescence(self, ctx:ObsolescenceParser.ObsolescenceContext):
         text = "import datetime \nfrom BUML.metamodel.structural import DomainModel \n"
-        text += "from BUML.metamodel.obsolescence import ObsolescenceDeclaration, ObsolescenceRulesModel, Impact, \\\n\tFixedObsolescence, PeriodicObsolescence, InternalObsolescence, DataObsolescence, CriticalType \n\n"
+        text += "from metamodel.obsolescence import ObsolescenceDeclaration, ObsolescenceRulesModel, Impact, \\\n\tFixedObsolescence, PeriodicObsolescence, InternalObsolescence, DataObsolescence, CriticalType \n\n"
         text += "def create_model(buml_model: DomainModel): \n"
         self.output.write(text)
 
