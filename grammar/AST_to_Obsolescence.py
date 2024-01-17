@@ -2,7 +2,7 @@ from antlr4 import CommonTokenStream, FileStream, ParseTreeWalker
 from .ObsolescenceLexer import ObsolescenceLexer
 from .ObsolescenceParser import ObsolescenceParser
 from .ModelCreationListener import ModelCreationListener
-from BUML.metamodel.structural import DomainModel
+from besser.BUML.metamodel.structural import DomainModel
 from metamodel import enable_obsolescence
 import os
 

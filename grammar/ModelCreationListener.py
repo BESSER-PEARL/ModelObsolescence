@@ -13,7 +13,7 @@ class ModelCreationListener(ObsolescenceListener):
         self.__element_list: list = list()
 
     def enterObsolescence(self, ctx:ObsolescenceParser.ObsolescenceContext):
-        text = "import datetime \nfrom BUML.metamodel.structural import DomainModel \n"
+        text = "import datetime \nfrom besser.BUML.metamodel.structural import DomainModel \n"
         text += "from metamodel.obsolescence import ObsolescenceDeclaration, ObsolescenceRulesModel, Impact, \\\n\tFixedObsolescence, PeriodicObsolescence, InternalObsolescence, DataObsolescence, CriticalType \n\n"
         text += "def create_model(buml_model: DomainModel): \n"
         self.output.write(text)
@@ -31,7 +31,7 @@ class ModelCreationListener(ObsolescenceListener):
         self.__impact_counter = 0
         obs_type = get_obs_type(ctx)
         self.__obs_text = "\t" + ctx.ID().getText() + " = "+ obs_type +"(name=\"" + ctx.ID().getText() \
-            + "\", criticality=CriticalType." + ctx.criticalityType().getText() + ", confidence=" + ctx.criticalityType().getText() \
+            + "\", criticality=CriticalType." + ctx.criticalityType().getText() + ", confidence=" + ctx.INT().getText() \
             + ", date_set=datetime.datetime.now()"
     
     def exitObsolescenceDeclaration(self, ctx:ObsolescenceParser.ObsolescenceDeclarationContext):

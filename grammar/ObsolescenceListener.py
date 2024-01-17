@@ -152,6 +152,15 @@ class ObsolescenceListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by ObsolescenceParser#enumeration.
+    def enterEnumeration(self, ctx:ObsolescenceParser.EnumerationContext):
+        pass
+
+    # Exit a parse tree produced by ObsolescenceParser#enumeration.
+    def exitEnumeration(self, ctx:ObsolescenceParser.EnumerationContext):
+        pass
+
+
     # Enter a parse tree produced by ObsolescenceParser#criticalityType.
     def enterCriticalityType(self, ctx:ObsolescenceParser.CriticalityTypeContext):
         pass

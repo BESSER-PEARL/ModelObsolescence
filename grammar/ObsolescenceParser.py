@@ -10,54 +10,53 @@ else:
 
 def serializedATN():
     return [
-        4,1,41,152,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,
+        4,1,46,154,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,
         6,2,7,7,7,2,8,7,8,2,9,7,9,2,10,7,10,2,11,7,11,2,12,7,12,2,13,7,13,
-        2,14,7,14,2,15,7,15,2,16,7,16,2,17,7,17,1,0,1,0,1,0,4,0,40,8,0,11,
-        0,12,0,41,1,1,1,1,1,1,1,1,1,1,3,1,49,8,1,1,1,1,1,1,1,1,1,3,1,55,
-        8,1,1,1,1,1,1,1,1,1,3,1,61,8,1,1,1,1,1,1,1,1,1,3,1,67,8,1,1,1,1,
-        1,1,1,4,1,72,8,1,11,1,12,1,73,1,1,1,1,1,2,1,2,1,2,4,2,81,8,2,11,
-        2,12,2,82,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,3,1,3,1,3,1,3,3,3,96,8,3,
-        1,4,1,4,1,4,1,4,1,5,1,5,1,5,1,5,1,6,1,6,1,6,1,7,1,7,1,7,1,8,1,8,
-        1,8,1,8,1,8,1,8,1,9,1,9,1,9,1,10,1,10,1,10,1,10,1,10,3,10,126,8,
-        10,1,11,1,11,1,11,1,11,1,11,1,12,1,12,1,12,1,13,1,13,1,13,1,14,1,
-        14,1,14,1,15,1,15,1,15,1,15,1,16,1,16,3,16,148,8,16,1,17,1,17,1,
-        17,0,0,18,0,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,0,1,1,
-        0,32,35,148,0,36,1,0,0,0,2,43,1,0,0,0,4,77,1,0,0,0,6,91,1,0,0,0,
-        8,97,1,0,0,0,10,101,1,0,0,0,12,105,1,0,0,0,14,108,1,0,0,0,16,111,
-        1,0,0,0,18,117,1,0,0,0,20,125,1,0,0,0,22,127,1,0,0,0,24,132,1,0,
-        0,0,26,135,1,0,0,0,28,138,1,0,0,0,30,141,1,0,0,0,32,147,1,0,0,0,
-        34,149,1,0,0,0,36,37,3,28,14,0,37,39,5,1,0,0,38,40,3,2,1,0,39,38,
-        1,0,0,0,40,41,1,0,0,0,41,39,1,0,0,0,41,42,1,0,0,0,42,1,1,0,0,0,43,
-        44,5,40,0,0,44,48,5,2,0,0,45,46,5,3,0,0,46,47,5,4,0,0,47,49,3,32,
-        16,0,48,45,1,0,0,0,48,49,1,0,0,0,49,54,1,0,0,0,50,51,5,5,0,0,51,
-        52,5,6,0,0,52,53,5,4,0,0,53,55,5,39,0,0,54,50,1,0,0,0,54,55,1,0,
-        0,0,55,60,1,0,0,0,56,57,5,5,0,0,57,58,5,7,0,0,58,59,5,4,0,0,59,61,
-        3,16,8,0,60,56,1,0,0,0,60,61,1,0,0,0,61,62,1,0,0,0,62,66,5,8,0,0,
-        63,67,3,6,3,0,64,67,3,10,5,0,65,67,3,8,4,0,66,63,1,0,0,0,66,64,1,
-        0,0,0,66,65,1,0,0,0,66,67,1,0,0,0,67,68,1,0,0,0,68,69,5,9,0,0,69,
-        71,5,10,0,0,70,72,3,4,2,0,71,70,1,0,0,0,72,73,1,0,0,0,73,71,1,0,
-        0,0,73,74,1,0,0,0,74,75,1,0,0,0,75,76,5,11,0,0,76,3,1,0,0,0,77,78,
-        5,12,0,0,78,80,5,13,0,0,79,81,3,20,10,0,80,79,1,0,0,0,81,82,1,0,
-        0,0,82,80,1,0,0,0,82,83,1,0,0,0,83,84,1,0,0,0,84,85,5,14,0,0,85,
-        86,5,39,0,0,86,87,5,15,0,0,87,88,5,39,0,0,88,89,5,16,0,0,89,90,5,
-        39,0,0,90,5,1,0,0,0,91,92,5,17,0,0,92,95,5,4,0,0,93,96,3,12,6,0,
-        94,96,3,14,7,0,95,93,1,0,0,0,95,94,1,0,0,0,96,7,1,0,0,0,97,98,5,
-        18,0,0,98,99,5,4,0,0,99,100,5,41,0,0,100,9,1,0,0,0,101,102,5,19,
-        0,0,102,103,5,4,0,0,103,104,5,39,0,0,104,11,1,0,0,0,105,106,5,20,
-        0,0,106,107,3,16,8,0,107,13,1,0,0,0,108,109,5,21,0,0,109,110,3,18,
-        9,0,110,15,1,0,0,0,111,112,5,39,0,0,112,113,5,22,0,0,113,114,5,39,
-        0,0,114,115,5,22,0,0,115,116,5,39,0,0,116,17,1,0,0,0,117,118,5,39,
-        0,0,118,119,3,34,17,0,119,19,1,0,0,0,120,126,3,22,11,0,121,126,3,
-        24,12,0,122,126,3,26,13,0,123,126,3,28,14,0,124,126,3,30,15,0,125,
-        120,1,0,0,0,125,121,1,0,0,0,125,122,1,0,0,0,125,123,1,0,0,0,125,
-        124,1,0,0,0,126,21,1,0,0,0,127,128,5,23,0,0,128,129,5,40,0,0,129,
-        130,5,24,0,0,130,131,5,40,0,0,131,23,1,0,0,0,132,133,5,25,0,0,133,
-        134,5,40,0,0,134,25,1,0,0,0,135,136,5,26,0,0,136,137,5,40,0,0,137,
-        27,1,0,0,0,138,139,5,27,0,0,139,140,5,40,0,0,140,29,1,0,0,0,141,
-        142,5,28,0,0,142,143,5,40,0,0,143,144,5,29,0,0,144,31,1,0,0,0,145,
-        148,5,30,0,0,146,148,5,31,0,0,147,145,1,0,0,0,147,146,1,0,0,0,148,
-        33,1,0,0,0,149,150,7,0,0,0,150,35,1,0,0,0,10,41,48,54,60,66,73,82,
-        95,125,147
+        2,14,7,14,2,15,7,15,2,16,7,16,2,17,7,17,2,18,7,18,1,0,1,0,1,0,4,
+        0,42,8,0,11,0,12,0,43,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+        1,1,1,1,1,1,1,1,1,1,1,1,1,3,1,63,8,1,1,1,1,1,1,1,4,1,68,8,1,11,1,
+        12,1,69,1,1,1,1,1,2,1,2,1,2,1,2,4,2,78,8,2,11,2,12,2,79,1,2,1,2,
+        1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,3,1,3,1,3,1,3,3,3,96,8,3,1,4,1,
+        4,1,4,1,4,1,5,1,5,1,5,1,5,1,6,1,6,1,6,1,7,1,7,1,7,1,8,1,8,1,8,1,
+        8,1,8,1,8,1,9,1,9,1,9,1,10,1,10,1,10,1,10,1,10,1,10,3,10,127,8,10,
+        1,11,1,11,1,11,1,11,1,11,1,12,1,12,1,12,1,13,1,13,1,13,1,14,1,14,
+        1,14,1,15,1,15,1,15,1,15,1,16,1,16,1,16,1,17,1,17,1,18,1,18,1,18,
+        0,0,19,0,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,0,2,1,
+        0,31,32,1,0,33,40,146,0,38,1,0,0,0,2,45,1,0,0,0,4,73,1,0,0,0,6,91,
+        1,0,0,0,8,97,1,0,0,0,10,101,1,0,0,0,12,105,1,0,0,0,14,108,1,0,0,
+        0,16,111,1,0,0,0,18,117,1,0,0,0,20,126,1,0,0,0,22,128,1,0,0,0,24,
+        133,1,0,0,0,26,136,1,0,0,0,28,139,1,0,0,0,30,142,1,0,0,0,32,146,
+        1,0,0,0,34,149,1,0,0,0,36,151,1,0,0,0,38,39,3,28,14,0,39,41,5,1,
+        0,0,40,42,3,2,1,0,41,40,1,0,0,0,42,43,1,0,0,0,43,41,1,0,0,0,43,44,
+        1,0,0,0,44,1,1,0,0,0,45,46,5,45,0,0,46,47,5,2,0,0,47,48,5,3,0,0,
+        48,49,5,4,0,0,49,50,3,34,17,0,50,51,5,5,0,0,51,52,5,6,0,0,52,53,
+        5,4,0,0,53,54,5,44,0,0,54,55,5,5,0,0,55,56,5,7,0,0,56,57,5,4,0,0,
+        57,58,3,16,8,0,58,62,5,8,0,0,59,63,3,6,3,0,60,63,3,10,5,0,61,63,
+        3,8,4,0,62,59,1,0,0,0,62,60,1,0,0,0,62,61,1,0,0,0,62,63,1,0,0,0,
+        63,64,1,0,0,0,64,65,5,9,0,0,65,67,5,10,0,0,66,68,3,4,2,0,67,66,1,
+        0,0,0,68,69,1,0,0,0,69,67,1,0,0,0,69,70,1,0,0,0,70,71,1,0,0,0,71,
+        72,5,11,0,0,72,3,1,0,0,0,73,74,5,12,0,0,74,75,5,13,0,0,75,77,5,4,
+        0,0,76,78,3,20,10,0,77,76,1,0,0,0,78,79,1,0,0,0,79,77,1,0,0,0,79,
+        80,1,0,0,0,80,81,1,0,0,0,81,82,5,14,0,0,82,83,5,4,0,0,83,84,5,44,
+        0,0,84,85,5,15,0,0,85,86,5,4,0,0,86,87,5,44,0,0,87,88,5,16,0,0,88,
+        89,5,4,0,0,89,90,5,44,0,0,90,5,1,0,0,0,91,92,5,17,0,0,92,95,5,4,
+        0,0,93,96,3,12,6,0,94,96,3,14,7,0,95,93,1,0,0,0,95,94,1,0,0,0,96,
+        7,1,0,0,0,97,98,5,18,0,0,98,99,5,4,0,0,99,100,5,46,0,0,100,9,1,0,
+        0,0,101,102,5,19,0,0,102,103,5,4,0,0,103,104,5,44,0,0,104,11,1,0,
+        0,0,105,106,5,20,0,0,106,107,3,16,8,0,107,13,1,0,0,0,108,109,5,21,
+        0,0,109,110,3,18,9,0,110,15,1,0,0,0,111,112,5,44,0,0,112,113,5,22,
+        0,0,113,114,5,44,0,0,114,115,5,22,0,0,115,116,5,44,0,0,116,17,1,
+        0,0,0,117,118,5,44,0,0,118,119,3,36,18,0,119,19,1,0,0,0,120,127,
+        3,22,11,0,121,127,3,24,12,0,122,127,3,26,13,0,123,127,3,28,14,0,
+        124,127,3,30,15,0,125,127,3,32,16,0,126,120,1,0,0,0,126,121,1,0,
+        0,0,126,122,1,0,0,0,126,123,1,0,0,0,126,124,1,0,0,0,126,125,1,0,
+        0,0,127,21,1,0,0,0,128,129,5,23,0,0,129,130,5,45,0,0,130,131,5,24,
+        0,0,131,132,5,45,0,0,132,23,1,0,0,0,133,134,5,25,0,0,134,135,5,45,
+        0,0,135,25,1,0,0,0,136,137,5,26,0,0,137,138,5,45,0,0,138,27,1,0,
+        0,0,139,140,5,27,0,0,140,141,5,45,0,0,141,29,1,0,0,0,142,143,5,28,
+        0,0,143,144,5,45,0,0,144,145,5,29,0,0,145,31,1,0,0,0,146,147,5,30,
+        0,0,147,148,5,45,0,0,148,33,1,0,0,0,149,150,7,0,0,0,150,35,1,0,0,
+        0,151,152,7,1,0,0,152,37,1,0,0,0,6,43,62,69,79,95,126
     ]
 
 class ObsolescenceParser ( Parser ):
@@ -72,12 +71,13 @@ class ObsolescenceParser ( Parser ):
 
     literalNames = [ "<INVALID>", "':'", "'('", "'criticality'", "'='", 
                      "','", "'confidence'", "'date'", "')'", "'{'", "'impacts:'", 
-                     "'}'", "'->'", "'elements:'", "'impact:'", "'propagation:'", 
-                     "'impact loss:'", "'expires'", "'rule'", "'discrepancy'", 
+                     "'}'", "'->'", "'elements'", "'impact'", "'propagation'", 
+                     "'impact loss'", "'expires'", "'rule'", "'discrepancy'", 
                      "'until'", "'every'", "'/'", "'Attribute'", "'ofClass'", 
                      "'Relation'", "'Class'", "'Model'", "'Function'", "'()'", 
-                     "'Warning'", "'Error'", "'hour'", "'day'", "'month'", 
-                     "'year'" ]
+                     "'Enumeration'", "'Warning'", "'Error'", "'hour'", 
+                     "'hours'", "'day'", "'days'", "'month'", "'months'", 
+                     "'year'", "'years'" ]
 
     symbolicNames = [ "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
                       "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
@@ -88,7 +88,9 @@ class ObsolescenceParser ( Parser ):
                       "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
                       "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
                       "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
-                      "WS", "ML_COMMENT", "SL_COMMENT", "INT", "ID", "STRING" ]
+                      "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
+                      "<INVALID>", "WS", "ML_COMMENT", "SL_COMMENT", "INT", 
+                      "ID", "STRING" ]
 
     RULE_obsolescence = 0
     RULE_obsolescenceDeclaration = 1
@@ -106,14 +108,15 @@ class ObsolescenceParser ( Parser ):
     RULE_class = 13
     RULE_modelSet = 14
     RULE_functionSet = 15
-    RULE_criticalityType = 16
-    RULE_tUnit = 17
+    RULE_enumeration = 16
+    RULE_criticalityType = 17
+    RULE_tUnit = 18
 
     ruleNames =  [ "obsolescence", "obsolescenceDeclaration", "impact", 
                    "temporalDeclaration", "internalDeclaration", "dataDeclaration", 
                    "dateReached", "dateRecurring", "dateObsolescence", "periodObsolescence", 
                    "modelElement", "attribute", "relation", "class", "modelSet", 
-                   "functionSet", "criticalityType", "tUnit" ]
+                   "functionSet", "enumeration", "criticalityType", "tUnit" ]
 
     EOF = Token.EOF
     T__0=1
@@ -151,12 +154,17 @@ class ObsolescenceParser ( Parser ):
     T__32=33
     T__33=34
     T__34=35
-    WS=36
-    ML_COMMENT=37
-    SL_COMMENT=38
-    INT=39
-    ID=40
-    STRING=41
+    T__35=36
+    T__36=37
+    T__37=38
+    T__38=39
+    T__39=40
+    WS=41
+    ML_COMMENT=42
+    SL_COMMENT=43
+    INT=44
+    ID=45
+    STRING=46
 
     def __init__(self, input:TokenStream, output:TextIO = sys.stdout):
         super().__init__(input, output)
@@ -174,8 +182,6 @@ class ObsolescenceParser ( Parser ):
             super().__init__(parent, invokingState)
             self.parser = parser
             self.model = None # ModelSetContext
-            self._obsolescenceDeclaration = None # ObsolescenceDeclarationContext
-            self.declarations = list() # of ObsolescenceDeclarationContexts
 
         def modelSet(self):
             return self.getTypedRuleContext(ObsolescenceParser.ModelSetContext,0)
@@ -209,21 +215,20 @@ class ObsolescenceParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 36
+            self.state = 38
             localctx.model = self.modelSet()
-            self.state = 37
+            self.state = 39
             self.match(ObsolescenceParser.T__0)
-            self.state = 39 
+            self.state = 41 
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             while True:
-                self.state = 38
-                localctx._obsolescenceDeclaration = self.obsolescenceDeclaration()
-                localctx.declarations.append(localctx._obsolescenceDeclaration)
-                self.state = 41 
+                self.state = 40
+                self.obsolescenceDeclaration()
+                self.state = 43 
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if not (_la==40):
+                if not (_la==45):
                     break
 
         except RecognitionException as re:
@@ -242,17 +247,10 @@ class ObsolescenceParser ( Parser ):
             super().__init__(parent, invokingState)
             self.parser = parser
             self.name = None # Token
-            self.criticality = None # CriticalityTypeContext
-            self.confidence = None # Token
             self.date = None # DateObsolescenceContext
             self.temporal = None # TemporalDeclarationContext
             self.data = None # DataDeclarationContext
             self.internal = None # InternalDeclarationContext
-            self._impact = None # ImpactContext
-            self.impacts = list() # of ImpactContexts
-
-        def ID(self):
-            return self.getToken(ObsolescenceParser.ID, 0)
 
         def criticalityType(self):
             return self.getTypedRuleContext(ObsolescenceParser.CriticalityTypeContext,0)
@@ -261,8 +259,18 @@ class ObsolescenceParser ( Parser ):
         def INT(self):
             return self.getToken(ObsolescenceParser.INT, 0)
 
+        def ID(self):
+            return self.getToken(ObsolescenceParser.ID, 0)
+
         def dateObsolescence(self):
             return self.getTypedRuleContext(ObsolescenceParser.DateObsolescenceContext,0)
+
+
+        def impact(self, i:int=None):
+            if i is None:
+                return self.getTypedRuleContexts(ObsolescenceParser.ImpactContext)
+            else:
+                return self.getTypedRuleContext(ObsolescenceParser.ImpactContext,i)
 
 
         def temporalDeclaration(self):
@@ -275,13 +283,6 @@ class ObsolescenceParser ( Parser ):
 
         def internalDeclaration(self):
             return self.getTypedRuleContext(ObsolescenceParser.InternalDeclarationContext,0)
-
-
-        def impact(self, i:int=None):
-            if i is None:
-                return self.getTypedRuleContexts(ObsolescenceParser.ImpactContext)
-            else:
-                return self.getTypedRuleContext(ObsolescenceParser.ImpactContext,i)
 
 
         def getRuleIndex(self):
@@ -305,89 +306,70 @@ class ObsolescenceParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 43
+            self.state = 45
             localctx.name = self.match(ObsolescenceParser.ID)
-            self.state = 44
+            self.state = 46
             self.match(ObsolescenceParser.T__1)
+            self.state = 47
+            self.match(ObsolescenceParser.T__2)
             self.state = 48
-            self._errHandler.sync(self)
-            _la = self._input.LA(1)
-            if _la==3:
-                self.state = 45
-                self.match(ObsolescenceParser.T__2)
-                self.state = 46
-                self.match(ObsolescenceParser.T__3)
-                self.state = 47
-                localctx.criticality = self.criticalityType()
-
-
+            self.match(ObsolescenceParser.T__3)
+            self.state = 49
+            self.criticalityType()
+            self.state = 50
+            self.match(ObsolescenceParser.T__4)
+            self.state = 51
+            self.match(ObsolescenceParser.T__5)
+            self.state = 52
+            self.match(ObsolescenceParser.T__3)
+            self.state = 53
+            self.match(ObsolescenceParser.INT)
             self.state = 54
-            self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,2,self._ctx)
-            if la_ == 1:
-                self.state = 50
-                self.match(ObsolescenceParser.T__4)
-                self.state = 51
-                self.match(ObsolescenceParser.T__5)
-                self.state = 52
-                self.match(ObsolescenceParser.T__3)
-                self.state = 53
-                localctx.confidence = self.match(ObsolescenceParser.INT)
-
-
-            self.state = 60
-            self._errHandler.sync(self)
-            _la = self._input.LA(1)
-            if _la==5:
-                self.state = 56
-                self.match(ObsolescenceParser.T__4)
-                self.state = 57
-                self.match(ObsolescenceParser.T__6)
-                self.state = 58
-                self.match(ObsolescenceParser.T__3)
-                self.state = 59
-                localctx.date = self.dateObsolescence()
-
-
-            self.state = 62
+            self.match(ObsolescenceParser.T__4)
+            self.state = 55
+            self.match(ObsolescenceParser.T__6)
+            self.state = 56
+            self.match(ObsolescenceParser.T__3)
+            self.state = 57
+            localctx.date = self.dateObsolescence()
+            self.state = 58
             self.match(ObsolescenceParser.T__7)
-            self.state = 66
+            self.state = 62
             self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [17]:
-                self.state = 63
+                self.state = 59
                 localctx.temporal = self.temporalDeclaration()
                 pass
             elif token in [19]:
-                self.state = 64
+                self.state = 60
                 localctx.data = self.dataDeclaration()
                 pass
             elif token in [18]:
-                self.state = 65
+                self.state = 61
                 localctx.internal = self.internalDeclaration()
                 pass
             elif token in [9]:
                 pass
             else:
                 pass
-            self.state = 68
+            self.state = 64
             self.match(ObsolescenceParser.T__8)
-            self.state = 69
+            self.state = 65
             self.match(ObsolescenceParser.T__9)
-            self.state = 71 
+            self.state = 67 
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             while True:
-                self.state = 70
-                localctx._impact = self.impact()
-                localctx.impacts.append(localctx._impact)
-                self.state = 73 
+                self.state = 66
+                self.impact()
+                self.state = 69 
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 if not (_la==12):
                     break
 
-            self.state = 75
+            self.state = 71
             self.match(ObsolescenceParser.T__10)
         except RecognitionException as re:
             localctx.exception = re
@@ -404,11 +386,6 @@ class ObsolescenceParser ( Parser ):
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
-            self._modelElement = None # ModelElementContext
-            self.elements = list() # of ModelElementContexts
-            self.impact_value = None # Token
-            self.propagation = None # Token
-            self.impact_loss = None # Token
 
         def INT(self, i:int=None):
             if i is None:
@@ -444,35 +421,42 @@ class ObsolescenceParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 77
+            self.state = 73
             self.match(ObsolescenceParser.T__11)
-            self.state = 78
+            self.state = 74
             self.match(ObsolescenceParser.T__12)
-            self.state = 80 
+            self.state = 75
+            self.match(ObsolescenceParser.T__3)
+            self.state = 77 
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             while True:
-                self.state = 79
-                localctx._modelElement = self.modelElement()
-                localctx.elements.append(localctx._modelElement)
-                self.state = 82 
+                self.state = 76
+                self.modelElement()
+                self.state = 79 
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if not ((((_la) & ~0x3f) == 0 and ((1 << _la) & 511705088) != 0)):
+                if not ((((_la) & ~0x3f) == 0 and ((1 << _la) & 1585446912) != 0)):
                     break
 
-            self.state = 84
+            self.state = 81
             self.match(ObsolescenceParser.T__13)
-            self.state = 85
-            localctx.impact_value = self.match(ObsolescenceParser.INT)
-            self.state = 86
+            self.state = 82
+            self.match(ObsolescenceParser.T__3)
+            self.state = 83
+            self.match(ObsolescenceParser.INT)
+            self.state = 84
             self.match(ObsolescenceParser.T__14)
+            self.state = 85
+            self.match(ObsolescenceParser.T__3)
+            self.state = 86
+            self.match(ObsolescenceParser.INT)
             self.state = 87
-            localctx.propagation = self.match(ObsolescenceParser.INT)
-            self.state = 88
             self.match(ObsolescenceParser.T__15)
+            self.state = 88
+            self.match(ObsolescenceParser.T__3)
             self.state = 89
-            localctx.impact_loss = self.match(ObsolescenceParser.INT)
+            self.match(ObsolescenceParser.INT)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -552,7 +536,6 @@ class ObsolescenceParser ( Parser ):
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
-            self.data_rule = None # Token
 
         def STRING(self):
             return self.getToken(ObsolescenceParser.STRING, 0)
@@ -582,7 +565,7 @@ class ObsolescenceParser ( Parser ):
             self.state = 98
             self.match(ObsolescenceParser.T__3)
             self.state = 99
-            localctx.data_rule = self.match(ObsolescenceParser.STRING)
+            self.match(ObsolescenceParser.STRING)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -598,7 +581,6 @@ class ObsolescenceParser ( Parser ):
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
-            self.discrepancy = None # Token
 
         def INT(self):
             return self.getToken(ObsolescenceParser.INT, 0)
@@ -628,7 +610,7 @@ class ObsolescenceParser ( Parser ):
             self.state = 102
             self.match(ObsolescenceParser.T__3)
             self.state = 103
-            localctx.discrepancy = self.match(ObsolescenceParser.INT)
+            self.match(ObsolescenceParser.INT)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -734,9 +716,6 @@ class ObsolescenceParser ( Parser ):
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
-            self.day = None # Token
-            self.month = None # Token
-            self.year = None # Token
 
         def INT(self, i:int=None):
             if i is None:
@@ -765,15 +744,15 @@ class ObsolescenceParser ( Parser ):
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 111
-            localctx.day = self.match(ObsolescenceParser.INT)
+            self.match(ObsolescenceParser.INT)
             self.state = 112
             self.match(ObsolescenceParser.T__21)
             self.state = 113
-            localctx.month = self.match(ObsolescenceParser.INT)
+            self.match(ObsolescenceParser.INT)
             self.state = 114
             self.match(ObsolescenceParser.T__21)
             self.state = 115
-            localctx.year = self.match(ObsolescenceParser.INT)
+            self.match(ObsolescenceParser.INT)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -789,14 +768,13 @@ class ObsolescenceParser ( Parser ):
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
-            self.period = None # Token
+
+        def INT(self):
+            return self.getToken(ObsolescenceParser.INT, 0)
 
         def tUnit(self):
             return self.getTypedRuleContext(ObsolescenceParser.TUnitContext,0)
 
-
-        def INT(self):
-            return self.getToken(ObsolescenceParser.INT, 0)
 
         def getRuleIndex(self):
             return ObsolescenceParser.RULE_periodObsolescence
@@ -819,7 +797,7 @@ class ObsolescenceParser ( Parser ):
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 117
-            localctx.period = self.match(ObsolescenceParser.INT)
+            self.match(ObsolescenceParser.INT)
             self.state = 118
             self.tUnit()
         except RecognitionException as re:
@@ -837,11 +815,6 @@ class ObsolescenceParser ( Parser ):
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
-            self.attribute_e = None # AttributeContext
-            self.relation_e = None # RelationContext
-            self.class_e = None # ClassContext
-            self.model_e = None # ModelSetContext
-            self.function_e = None # FunctionSetContext
 
         def attribute(self):
             return self.getTypedRuleContext(ObsolescenceParser.AttributeContext,0)
@@ -863,6 +836,10 @@ class ObsolescenceParser ( Parser ):
             return self.getTypedRuleContext(ObsolescenceParser.FunctionSetContext,0)
 
 
+        def enumeration(self):
+            return self.getTypedRuleContext(ObsolescenceParser.EnumerationContext,0)
+
+
         def getRuleIndex(self):
             return ObsolescenceParser.RULE_modelElement
 
@@ -882,33 +859,38 @@ class ObsolescenceParser ( Parser ):
         localctx = ObsolescenceParser.ModelElementContext(self, self._ctx, self.state)
         self.enterRule(localctx, 20, self.RULE_modelElement)
         try:
-            self.state = 125
+            self.state = 126
             self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [23]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 120
-                localctx.attribute_e = self.attribute()
+                self.attribute()
                 pass
             elif token in [25]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 121
-                localctx.relation_e = self.relation()
+                self.relation()
                 pass
             elif token in [26]:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 122
-                localctx.class_e = self.class_()
+                self.class_()
                 pass
             elif token in [27]:
                 self.enterOuterAlt(localctx, 4)
                 self.state = 123
-                localctx.model_e = self.modelSet()
+                self.modelSet()
                 pass
             elif token in [28]:
                 self.enterOuterAlt(localctx, 5)
                 self.state = 124
-                localctx.function_e = self.functionSet()
+                self.functionSet()
+                pass
+            elif token in [30]:
+                self.enterOuterAlt(localctx, 6)
+                self.state = 125
+                self.enumeration()
                 pass
             else:
                 raise NoViableAltException(self)
@@ -928,8 +910,6 @@ class ObsolescenceParser ( Parser ):
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
-            self.name = None # Token
-            self.class_name = None # Token
 
         def ID(self, i:int=None):
             if i is None:
@@ -957,14 +937,14 @@ class ObsolescenceParser ( Parser ):
         self.enterRule(localctx, 22, self.RULE_attribute)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 127
-            self.match(ObsolescenceParser.T__22)
             self.state = 128
-            localctx.name = self.match(ObsolescenceParser.ID)
+            self.match(ObsolescenceParser.T__22)
             self.state = 129
-            self.match(ObsolescenceParser.T__23)
+            self.match(ObsolescenceParser.ID)
             self.state = 130
-            localctx.class_name = self.match(ObsolescenceParser.ID)
+            self.match(ObsolescenceParser.T__23)
+            self.state = 131
+            self.match(ObsolescenceParser.ID)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -980,7 +960,6 @@ class ObsolescenceParser ( Parser ):
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
-            self.name = None # Token
 
         def ID(self):
             return self.getToken(ObsolescenceParser.ID, 0)
@@ -1005,10 +984,10 @@ class ObsolescenceParser ( Parser ):
         self.enterRule(localctx, 24, self.RULE_relation)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 132
-            self.match(ObsolescenceParser.T__24)
             self.state = 133
-            localctx.name = self.match(ObsolescenceParser.ID)
+            self.match(ObsolescenceParser.T__24)
+            self.state = 134
+            self.match(ObsolescenceParser.ID)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -1024,7 +1003,6 @@ class ObsolescenceParser ( Parser ):
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
-            self.name = None # Token
 
         def ID(self):
             return self.getToken(ObsolescenceParser.ID, 0)
@@ -1049,10 +1027,10 @@ class ObsolescenceParser ( Parser ):
         self.enterRule(localctx, 26, self.RULE_class)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 135
-            self.match(ObsolescenceParser.T__25)
             self.state = 136
-            localctx.name = self.match(ObsolescenceParser.ID)
+            self.match(ObsolescenceParser.T__25)
+            self.state = 137
+            self.match(ObsolescenceParser.ID)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -1068,7 +1046,6 @@ class ObsolescenceParser ( Parser ):
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
-            self.name = None # Token
 
         def ID(self):
             return self.getToken(ObsolescenceParser.ID, 0)
@@ -1093,10 +1070,10 @@ class ObsolescenceParser ( Parser ):
         self.enterRule(localctx, 28, self.RULE_modelSet)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 138
-            self.match(ObsolescenceParser.T__26)
             self.state = 139
-            localctx.name = self.match(ObsolescenceParser.ID)
+            self.match(ObsolescenceParser.T__26)
+            self.state = 140
+            self.match(ObsolescenceParser.ID)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -1112,7 +1089,6 @@ class ObsolescenceParser ( Parser ):
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
-            self.name = None # Token
 
         def ID(self):
             return self.getToken(ObsolescenceParser.ID, 0)
@@ -1137,12 +1113,55 @@ class ObsolescenceParser ( Parser ):
         self.enterRule(localctx, 30, self.RULE_functionSet)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 141
-            self.match(ObsolescenceParser.T__27)
             self.state = 142
-            localctx.name = self.match(ObsolescenceParser.ID)
+            self.match(ObsolescenceParser.T__27)
             self.state = 143
+            self.match(ObsolescenceParser.ID)
+            self.state = 144
             self.match(ObsolescenceParser.T__28)
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+
+    class EnumerationContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def ID(self):
+            return self.getToken(ObsolescenceParser.ID, 0)
+
+        def getRuleIndex(self):
+            return ObsolescenceParser.RULE_enumeration
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterEnumeration" ):
+                listener.enterEnumeration(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitEnumeration" ):
+                listener.exitEnumeration(self)
+
+
+
+
+    def enumeration(self):
+
+        localctx = ObsolescenceParser.EnumerationContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 32, self.RULE_enumeration)
+        try:
+            self.enterOuterAlt(localctx, 1)
+            self.state = 146
+            self.match(ObsolescenceParser.T__29)
+            self.state = 147
+            self.match(ObsolescenceParser.ID)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -1158,7 +1177,6 @@ class ObsolescenceParser ( Parser ):
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
-            self.c_type = None # Token
 
 
         def getRuleIndex(self):
@@ -1178,24 +1196,17 @@ class ObsolescenceParser ( Parser ):
     def criticalityType(self):
 
         localctx = ObsolescenceParser.CriticalityTypeContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 32, self.RULE_criticalityType)
+        self.enterRule(localctx, 34, self.RULE_criticalityType)
+        self._la = 0 # Token type
         try:
-            self.state = 147
-            self._errHandler.sync(self)
-            token = self._input.LA(1)
-            if token in [30]:
-                self.enterOuterAlt(localctx, 1)
-                self.state = 145
-                localctx.c_type = self.match(ObsolescenceParser.T__29)
-                pass
-            elif token in [31]:
-                self.enterOuterAlt(localctx, 2)
-                self.state = 146
-                localctx.c_type = self.match(ObsolescenceParser.T__30)
-                pass
+            self.enterOuterAlt(localctx, 1)
+            self.state = 149
+            _la = self._input.LA(1)
+            if not(_la==31 or _la==32):
+                self._errHandler.recoverInline(self)
             else:
-                raise NoViableAltException(self)
-
+                self._errHandler.reportMatch(self)
+                self.consume()
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -1230,13 +1241,13 @@ class ObsolescenceParser ( Parser ):
     def tUnit(self):
 
         localctx = ObsolescenceParser.TUnitContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 34, self.RULE_tUnit)
+        self.enterRule(localctx, 36, self.RULE_tUnit)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 149
+            self.state = 151
             _la = self._input.LA(1)
-            if not((((_la) & ~0x3f) == 0 and ((1 << _la) & 64424509440) != 0)):
+            if not((((_la) & ~0x3f) == 0 and ((1 << _la) & 2190433320960) != 0)):
                 self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)

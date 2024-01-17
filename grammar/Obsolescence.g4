@@ -1,49 +1,52 @@
 grammar Obsolescence;
 
-obsolescence                : model=modelSet ':' declarations+=obsolescenceDeclaration+;
+obsolescence                : model=modelSet ':' obsolescenceDeclaration+;
 
-obsolescenceDeclaration     : name=ID '(' ('criticality' '=' criticality=criticalityType)? (',' 'confidence' '=' confidence=INT)? 
-                              (',' 'date' '=' date=dateObsolescence)? ')'
+obsolescenceDeclaration     : name=ID '(' 'criticality' '=' criticalityType ',' 
+                              'confidence' '=' INT ','
+                              'date' '=' date=dateObsolescence ')'
                               (temporal=temporalDeclaration | data=dataDeclaration | internal=internalDeclaration )? '{'
-                              'impacts:' impacts+=impact+
+                              'impacts:' impact+
                               '}'
                               ;
 
-impact                      : '->' 'elements:' elements+=modelElement+
-                                   'impact:' impact_value=INT
-                                   'propagation:' propagation=INT
-                                   'impact loss:' impact_loss=INT
+impact                      : '->' 'elements' '=' modelElement+
+                                   'impact' '=' INT
+                                   'propagation' '=' INT
+                                   'impact loss' '=' INT
                               ;
 
 temporalDeclaration         : 'expires' '=' (fixed=dateReached | periodic=dateRecurring) ;
 
-internalDeclaration         : 'rule' '=' data_rule=STRING ;
+internalDeclaration         : 'rule' '=' STRING ;
 
-dataDeclaration             : 'discrepancy' '=' discrepancy=INT;
+dataDeclaration             : 'discrepancy' '=' INT;
 
 dateReached                 : 'until' until=dateObsolescence ;
 
 dateRecurring               : 'every' every=periodObsolescence ;
 
-dateObsolescence            : day=INT '/' month=INT '/' year=INT ;
+dateObsolescence            : INT '/' INT '/' INT ;
 
-periodObsolescence          : period=INT tUnit ;
+periodObsolescence          : INT tUnit ;
 
-modelElement                : attribute_e=attribute | relation_e=relation | class_e=class | model_e=modelSet | function_e=functionSet ;
+modelElement                : attribute | relation | class | modelSet | functionSet | enumeration ;
 
-attribute                   : 'Attribute' name=ID 'ofClass' class_name=ID ;
+attribute                   : 'Attribute' ID 'ofClass' ID ;
 
-relation                    : 'Relation' name=ID ;
+relation                    : 'Relation' ID ;
 
-class                       : 'Class' name=ID ;
+class                       : 'Class' ID ;
 
-modelSet                    : 'Model' name=ID ;
+modelSet                    : 'Model' ID ;
 
-functionSet                 : 'Function' name=ID '()' ;
+functionSet                 : 'Function' ID '()' ;
 
-criticalityType             : c_type='Warning' | c_type='Error' ;
+enumeration                 : 'Enumeration' ID ;
 
-tUnit                       : 'hour' | 'day' | 'month' | 'year' ;
+criticalityType             : 'Warning' | 'Error' ;
+
+tUnit                       : 'hour' | 'hours' | 'day' | 'days' | 'month' | 'months' | 'year' | 'years' ;
 
 WS                          : [ \t\r\n]+ -> skip ;
 
