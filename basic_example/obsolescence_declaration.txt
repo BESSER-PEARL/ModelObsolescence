@@ -1,16 +1,16 @@
 Model TestModel:
-    temp_fixed (criticality=Warning, confidence=90, date=15/06/2023) expires = until 15/12/2024 {
+    temp_fixed (criticality=Warning, confidence=90, date=15/06/2023) expires = until 15/12/2023 {
         impacts:
-            -> elements: Class Book
-               impact: 50
-               propagation: 2
-               impact loss: 10
+            -> elements= Class Book
+               impact= 50
+               propagation= 2
+               impact loss= 10
     }
 
-    temp_periodic (criticality=Warning, confidence=90, date=15/06/2023) expires = every 10 day {
+    temp_periodic (criticality=Error, confidence=90, date=15/06/2023) expires = every 10 day {
         impacts:
-            -> elements: Class Book
-               impact: 50
-               propagation: 2
-               impact loss: 10
+            -> elements= Class Book
+               impact= 50
+               propagation= 2
+               impact loss= 10
     }
