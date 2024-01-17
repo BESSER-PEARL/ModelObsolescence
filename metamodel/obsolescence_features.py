@@ -1,4 +1,4 @@
-from BUML.metamodel.structural import NamedElement, DomainModel, Class
+from besser.BUML.metamodel.structural import NamedElement, DomainModel, Class
 import datetime
 
 class Change(NamedElement):
@@ -38,15 +38,15 @@ class Revision(NamedElement):
 
 ##-- Change History Methods
 @property
-def change_history(self) -> set[Change]:
+def change_history(self) -> list[Change]:
     return self.changes
 
 @change_history.setter
-def change_history(self, change_history: set[Change]):
-    self.changes = change_history
+def change_history(self, changes: list[Change]):
+    self.changes = changes
 
 def add_change(self, change: Change):
-    self.changes.add(change)
+    self.changes.append(change)
 
 ##-- Revision History Methods
 @property
@@ -54,8 +54,8 @@ def revision_history(self) -> set[Revision]:
     return self.revisions
 
 @revision_history.setter
-def revision_history(self, revision_history: set[Revision]):
-    self.revisions = revision_history
+def revision_history(self, revisions: set[Revision]):
+    self.revisions = revisions
 
 def add_revision(self, revision: Revision):
     self.revisions.add(revision)
@@ -63,7 +63,7 @@ def add_revision(self, revision: Revision):
 #--Enable obsolescence properties and methods for a specific object or class
 def enable_obsolescence_artifact(artifact:any):
     artifact.obsolete: float = 0
-    artifact.changes: set[Change] = set()
+    artifact.changes: list[Change] = list()
     artifact.revisions: set[Revision] = set()
     artifact.change_history = change_history
     artifact.revision_history = revision_history

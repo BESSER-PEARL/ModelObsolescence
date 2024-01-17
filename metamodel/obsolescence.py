@@ -1,4 +1,4 @@
-from BUML.metamodel.structural import NamedElement
+from besser.BUML.metamodel.structural import NamedElement
 from enum import Enum
 import datetime
 
