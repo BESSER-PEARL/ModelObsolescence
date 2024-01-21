@@ -61,8 +61,8 @@ class ModelCreationListener(ObsolescenceListener):
 
     def exitImpact(self, ctx: ObsolescenceParser.ImpactContext):
         elements = ", ".join(self.__element_list)
-        self.__impact_text += elements + "}, impact= " + ctx.INT(0).getText() + ", propagation_level= " + ctx.INT(1).getText() \
-            + ", propagation_impact= " + ctx.INT(2).getText() + ") \n"
+        self.__impact_text += elements + "}, impact=" + ctx.INT(0).getText() + ", propagation_level=" + ctx.INT(1).getText() \
+            + ", propagation_impact=" + ctx.INT(2).getText() + ") \n"
         self.output.write(self.__impact_text)  
 
     def enterClass(self, ctx: ObsolescenceParser.ClassContext):

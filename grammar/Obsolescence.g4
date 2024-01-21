@@ -11,9 +11,9 @@ obsolescenceDeclaration     : name=ID '(' 'criticality' '=' criticalityType ','
                               ;
 
 impact                      : '->' 'elements' '=' modelElement+
-                                   'impact' '=' INT
-                                   'propagation' '=' INT
-                                   'impact loss' '=' INT
+                                   'impact' '=' INT '%'
+                                   'propagation level' '=' INT
+                                   'propagation impact loss' '=' INT '%'
                               ;
 
 temporalDeclaration         : 'expires' '=' (fixed=dateReached | periodic=dateRecurring) ;
@@ -46,7 +46,7 @@ enumeration                 : 'Enumeration' ID ;
 
 criticalityType             : 'Warning' | 'Error' ;
 
-tUnit                       : 'hour' | 'hours' | 'day' | 'days' | 'month' | 'months' | 'year' | 'years' ;
+tUnit                       : 's' | 'min' | 'h' | 'd' | 'm' | 'y' ;
 
 WS                          : [ \t\r\n]+ -> skip ;
 

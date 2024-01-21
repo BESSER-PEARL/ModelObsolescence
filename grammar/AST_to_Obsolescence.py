@@ -25,5 +25,5 @@ def obsolescence_declaration(obsolescence_rules: str, buml_model: DomainModel):
         exec(code, namespace)
     function = namespace.get('create_model')
     obsolescence_model = function(buml_model)
-    enable_obsolescence()
+    enable_obsolescence(model=buml_model)
     return obsolescence_model
