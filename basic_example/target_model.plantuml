@@ -17,7 +17,12 @@ class Author {
 + email: str 
 }
 
+class Institution {
++ name: str
+}
+
 Book "*" -- "1..*" Author: writedBy
 Library "1" -- "*" Book: has
+Author "*" -- "1" Institution: work
 
 @enduml
