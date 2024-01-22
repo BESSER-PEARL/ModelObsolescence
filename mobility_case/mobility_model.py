@@ -9,19 +9,19 @@ int_type = PrimitiveDataType("int")
 float_type = PrimitiveDataType("float")
 str_type = PrimitiveDataType("str")
 
-# ChargingState Ennum
+# ChargingState Enum
 charging_state: Enumeration = Enumeration(name="ChargingState", literals={
     EnumerationLiteral(name="available", owner=None),
     EnumerationLiteral(name="charging", owner=None),
     EnumerationLiteral(name="offline", owner=None)})
 
-# CoatingTypes Ennum
-coating_types: Enumeration = Enumeration(name="CoatingTypes", literals={
+# CoatingTypes Enum
+coating_type: Enumeration = Enumeration(name="CoatingTypes", literals={
     EnumerationLiteral(name="gravel", owner=None),
     EnumerationLiteral(name="asphalt", owner=None),
     EnumerationLiteral(name="pavingStone", owner=None)})
 
-# StationType Ennum
+# StationType Enum
 station_type: Enumeration = Enumeration(name="StationType", literals={
     EnumerationLiteral(name="busStop", owner=None),
     EnumerationLiteral(name="charger", owner=None),
@@ -30,7 +30,7 @@ station_type: Enumeration = Enumeration(name="StationType", literals={
 # Segment class definition 
 Segment_slope: Property = Property(name="slope", property_type=int_type)
 Segment_distance: Property = Property(name="distance", property_type=float_type)
-Segment_coating: Property = Property(name="coating", property_type=str_type)
+Segment_coating: Property = Property(name="coating", property_type=coating_type)
 Segment_GeoPath: Property = Property(name="GeoPath", property_type=str_type)
 Segment: Class = Class(name="Segment", attributes={Segment_slope, Segment_distance, Segment_coating, Segment_GeoPath})
 
@@ -39,9 +39,9 @@ Line_lineNumber: Property = Property(name="lineNumber", property_type=int_type)
 Line: Class = Class(name="Line", attributes={Line_lineNumber})
 
 # ChargingPoint class definition 
-ChargingPoint_type: Property = Property(name="type", property_type=str_type)
+ChargingPoint_type: Property = Property(name="type", property_type=station_type)
 ChargingPoint_maxPower: Property = Property(name="maxPower", property_type=int_type)
-ChargingPoint_state: Property = Property(name="state", property_type=str_type)
+ChargingPoint_state: Property = Property(name="state", property_type=charging_state)
 ChargingPoint: Class = Class(name="ChargingPoint", attributes={ChargingPoint_type, ChargingPoint_maxPower, ChargingPoint_state})
 
 # BusStop class definition 
@@ -97,7 +97,7 @@ gen_Segment_Road: Generalization = Generalization(general=Segment, specific=Road
 domain: DomainModel = DomainModel(name="mobility", types={Segment, Line, ChargingPoint, BusStop, Road, Vehicle, ElectricBus, Bus}, 
                                   associations={points, segments, has_segments, has_points, lines, is_hosting}, 
                                   generalizations={gen_Vehicle_ElectricBus, gen_Vehicle_Bus, gen_Point_BusStop, gen_Segment_Road},
-                                  enumerations={charging_state, coating_types, station_type})
+                                  enumerations={charging_state, coating_type, station_type})
 
 
 serializer: ModelSerializer = ModelSerializer()
