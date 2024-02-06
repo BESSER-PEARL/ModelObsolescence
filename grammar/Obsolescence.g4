@@ -2,11 +2,12 @@ grammar Obsolescence;
 
 obsolescence                : model=modelSet ':' obsolescenceDeclaration+;
 
-obsolescenceDeclaration     : name=ID '(' 'criticality' '=' criticalityType ',' 
+obsolescenceDeclaration     : ID '(' 'criticality' '=' criticalityType ',' 
                               'confidence' '=' INT ','
-                              'date' '=' date=dateObsolescence ')'
-                              (temporal=temporalDeclaration | data=dataDeclaration | internal=internalDeclaration )? '{'
-                              'impacts:' impact+
+                              'dateSet' '=' dateObsolescence ')'
+                              (temporalDeclaration | dataDeclaration | internalDeclaration )? 
+                              '{'
+                              'impacts' ':' impact+
                               '}'
                               ;
 
