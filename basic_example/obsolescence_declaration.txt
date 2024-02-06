@@ -1,5 +1,5 @@
 Model TestModel:
-    temp_fixed (criticality=Warning, confidence=90, date=15/06/2023) expires = until 15/12/2023 {
+    temp_fixed (criticality=Warning, confidence=90, dateSet=15/06/2023) expires = until 15/12/2023 {
         impacts:
             -> elements= Class Book
                impact = 100%
@@ -7,7 +7,7 @@ Model TestModel:
                propagation impact loss = 20%
     }
 
-    temp_periodic (criticality=Error, confidence=90, date=15/06/2023) expires = every 2 s {
+    tempPeriodic (criticality=Error, confidence=90, dateSet=15/06/2023) expires = every 2 s {
         impacts:
             -> elements= Class Author
                impact = 20%
