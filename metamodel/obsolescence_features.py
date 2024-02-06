@@ -2,11 +2,20 @@ from besser.BUML.metamodel.structural import NamedElement, DomainModel, Class
 import datetime
 
 class Change(NamedElement):
-    def __init__(self, name: str, element: NamedElement, timestamp: datetime = datetime.datetime.now()):
+    def __init__(self, name: str, description: str, element: NamedElement, timestamp: datetime = datetime.datetime.now()):
         super().__init__(name)
+        self.description: str = description
         self.element: NamedElement = element
         self.timestamp: datetime = timestamp
-        
+
+    @property
+    def description(self) -> str:
+        return self.__description
+
+    @description.setter
+    def description(self, description: str):
+        self.__description = description
+
     @property
     def element(self) -> NamedElement:
         return self.__element
