@@ -111,10 +111,10 @@ def add_obsolescence_attributes(model: DomainModel):
         cls.revisions: list[Revision] = list()
 
 #--Enable obsolescence properties and methods
-def enable_obsolescence(model:DomainModel):
+def enable_obsolescence(model:DomainModel, date=datetime.datetime.now()):
     add_obsolescence_attributes(model=model)
     add_obsolescence_methods(artifact=Class)
-    create_first_revision(model)
+    create_first_revision(model, date=date)
 
 #--Disable obsolescence properties and methods for a specific object or class
 def disable_obsolescence_artifact(artifact:any):
@@ -130,6 +130,6 @@ def disable_obsolescence():
     disable_obsolescence_artifact(artifact=Class)
 
 #--Create the first revision for all classes
-def create_first_revision(model:DomainModel):
+def create_first_revision(model:DomainModel, date):
     for cls in model.get_classes():
-        cls.add_revision(Revision(name="First register", reviewer="runtime_engine", comment="First register"))
+        cls.add_revision(Revision(name="First register", reviewer="runtime_engine", comment="First register", timestamp=date))

@@ -51,10 +51,9 @@ class Impact(NamedElement):
 
 class ObsolescenceDeclaration(NamedElement):
 
-    def __init__(self, name: str, criticality: CriticalType, confidence: int, date_set: datetime, impacts: set[Impact], active: bool = True):
+    def __init__(self, name: str, criticality: CriticalType, date_set: datetime, impacts: set[Impact], active: bool = True):
         super().__init__(name)
         self.criticality: CriticalType = criticality
-        self.confidence: int = confidence
         self.date_set: datetime = date_set
         self.impacts: set[Impact] = impacts
         self.active: bool = active
@@ -66,14 +65,6 @@ class ObsolescenceDeclaration(NamedElement):
     @criticality.setter
     def criticality(self, criticality: CriticalType):
         self.__criticality = criticality
-
-    @property
-    def confidence(self) -> int:
-        return self.__confidence
-
-    @confidence.setter
-    def confidence(self, confidence: int):
-        self.__confidence = confidence
 
     @property
     def date_set(self) -> datetime:
@@ -100,14 +91,14 @@ class ObsolescenceDeclaration(NamedElement):
         self.__active = active
 
     def __repr__(self) -> str:
-        return f'ManualObs({self.name},{self.criticality},{self.confidence},{self.date_set},{self.impacts},{self.active})'
+        return f'ManualObs({self.name},{self.criticality},{self.date_set},{self.impacts},{self.active})'
 
 class TemporalObsolescence(ObsolescenceDeclaration):
     pass
         
 class PeriodicObsolescence(TemporalObsolescence):
-    def __init__(self, name: str, criticality: CriticalType, confidence: int, date_set: datetime, periodicity: int, unit: str, impacts: set[Impact], active: bool = True):
-        super().__init__(name, criticality, confidence, date_set, impacts, active)
+    def __init__(self, name: str, criticality: CriticalType, date_set: datetime, periodicity: int, unit: str, impacts: set[Impact], active: bool = True):
+        super().__init__(name, criticality, date_set, impacts, active)
         self.periodicity: int = periodicity
         self.unit: str = unit
 
@@ -128,11 +119,11 @@ class PeriodicObsolescence(TemporalObsolescence):
         self.__unit = unit
 
     def __repr__(self) -> str:
-        return f'PeriodicObs({self.name},{self.criticality},{self.confidence},{self.date_set},{self.impacts},{self.periodicity},{self.unit},{self.active})'
+        return f'PeriodicObs({self.name},{self.criticality},{self.date_set},{self.impacts},{self.periodicity},{self.unit},{self.active})'
 
 class FixedObsolescence(TemporalObsolescence):
-    def __init__(self, name: str, criticality: CriticalType, confidence: int, date_set: datetime, date: datetime, impacts: set[Impact], active: bool = True):
-        super().__init__(name, criticality, confidence, date_set, impacts, active)
+    def __init__(self, name: str, criticality: CriticalType, date_set: datetime, date: datetime, impacts: set[Impact], active: bool = True):
+        super().__init__(name, criticality, date_set, impacts, active)
         self.date: datetime = date
 
     @property
@@ -144,11 +135,11 @@ class FixedObsolescence(TemporalObsolescence):
         self.__date = date
 
     def __repr__(self) -> str:
-        return f'FixedObs({self.name},{self.criticality},{self.confidence},{self.date_set},{self.impacts},{self.date},{self.active})'
+        return f'FixedObs({self.name},{self.criticality},{self.date_set},{self.impacts},{self.date},{self.active})'
 
 class InternalObsolescence(TemporalObsolescence):
-    def __init__(self, name: str, criticality: CriticalType, confidence: int, date_set: datetime, rule: str, impacts: set[Impact], active: bool = True):
-        super().__init__(name, criticality, confidence, date_set, impacts, active)
+    def __init__(self, name: str, criticality: CriticalType, date_set: datetime, rule: str, impacts: set[Impact], active: bool = True):
+        super().__init__(name, criticality, date_set, impacts, active)
         self.rule: str = rule
 
     @property
@@ -160,11 +151,11 @@ class InternalObsolescence(TemporalObsolescence):
         self.__rule = rule
 
     def __repr__(self) -> str:
-        return f'ObsDeclaration({self.name},{self.criticality},{self.confidence},{self.date_set},{self.impacts},{self.rule},{self.active})'
+        return f'ObsDeclaration({self.name},{self.criticality},{self.date_set},{self.impacts},{self.rule},{self.active})'
 
 class DataObsolescence(TemporalObsolescence):
-    def __init__(self, name: str, criticality: CriticalType, confidence: int, date_set: datetime, discrepancy: int, impacts: set[Impact], active: bool = True):
-        super().__init__(name, criticality, confidence, date_set, impacts, active)
+    def __init__(self, name: str, criticality: CriticalType, date_set: datetime, discrepancy: int, impacts: set[Impact], active: bool = True):
+        super().__init__(name, criticality, date_set, impacts, active)
         self.discrepancy: int = discrepancy
 
     @property
@@ -176,7 +167,7 @@ class DataObsolescence(TemporalObsolescence):
         self.__discrepancy = discrepancy
 
     def __repr__(self) -> str:
-        return f'ObsDeclaration({self.name},{self.criticality},{self.confidence},{self.date_set},{self.impacts},{self.discrepancy},{self.active})'
+        return f'ObsDeclaration({self.name},{self.criticality},{self.date_set},{self.impacts},{self.discrepancy},{self.active})'
 
 class ObsolescenceRulesModel(NamedElement):
     def __init__(self, name: str, obs_declarations: set[ObsolescenceDeclaration]):
