@@ -31,7 +31,7 @@ class ModelCreationListener(ObsolescenceListener):
         self.__impact_counter = 0
         obs_type = get_obs_type(ctx)
         self.__obs_text = "\t" + ctx.ID().getText() + " = "+ obs_type +"(name=\"" + ctx.ID().getText() \
-            + "\", criticality=CriticalType." + ctx.criticalityType().getText() + ", confidence=" + ctx.INT().getText() \
+            + "\", criticality=CriticalType." + ctx.criticalityType().getText() \
             + ", date_set=datetime.datetime.now()"
     
     def exitObsolescenceDeclaration(self, ctx:ObsolescenceParser.ObsolescenceDeclarationContext):
@@ -46,11 +46,17 @@ class ModelCreationListener(ObsolescenceListener):
     def enterDataDeclaration(self, ctx:ObsolescenceParser.DataDeclarationContext):
         self.__obs_text += ", discrepancy=" + ctx.INT().getText()
 
-    def enterDateReached(self, ctx:ObsolescenceParser.DateReachedContext):
-        self.__obs_text += ", date=datetime.datetime("+ ctx.until.INT(2).getText() + ", " + ctx.until.INT(1).getText() + ", " + ctx.until.INT(0).getText() + ")"
+    def enterTemporalDeclaration(self, ctx: ObsolescenceParser.TemporalDeclarationContext):
+        if ctx.fixed is not None:
+            self.__obs_text += ", date=datetime.datetime("+ ctx.fixed.INT(2).getText() + ", " + ctx.fixed.INT(1).getText() + ", " + ctx.fixed.INT(0).getText() + ")"
+        if ctx.periodic is not None:
+            self.__obs_text += ", periodicity=" + ctx.periodic.INT().getText() + ", unit=\"" + ctx.periodic.tUnit().getText() + "\""
 
-    def enterDateRecurring(self, ctx:ObsolescenceParser.DateRecurringContext):
-        self.__obs_text += ", periodicity=" + ctx.every.INT().getText() + ", unit=\"" + ctx.every.tUnit().getText() + "\""
+    #def enterDateReached(self, ctx:ObsolescenceParser.DateReachedContext):
+    #    self.__obs_text += ", date=datetime.datetime("+ ctx.until.INT(2).getText() + ", " + ctx.until.INT(1).getText() + ", " + ctx.until.INT(0).getText() + ")"
+
+    #def enterDateRecurring(self, ctx:ObsolescenceParser.DateRecurringContext):
+    #    self.__obs_text += ", periodicity=" + ctx.every.INT().getText() + ", unit=\"" + ctx.every.tUnit().getText() + "\""
 
     def enterImpact(self, ctx: ObsolescenceParser.ImpactContext):
         self.__element_list = []
@@ -61,8 +67,10 @@ class ModelCreationListener(ObsolescenceListener):
 
     def exitImpact(self, ctx: ObsolescenceParser.ImpactContext):
         elements = ", ".join(self.__element_list)
-        self.__impact_text += elements + "}, impact=" + ctx.INT(0).getText() + ", propagation_level=" + ctx.INT(1).getText() \
-            + ", propagation_impact=" + ctx.INT(2).getText() + ") \n"
+        p_level = ctx.INT(1).getText() if ctx.INT(1) is not None else "0"
+        p_impact = ctx.INT(2).getText() if ctx.INT(2) is not None else "0"
+        self.__impact_text += elements + "}, impact=" + ctx.INT(0).getText() + ", propagation_level=" + p_level \
+            + ", propagation_impact=" + p_impact + ") \n"
         self.output.write(self.__impact_text)  
 
     def enterClass(self, ctx: ObsolescenceParser.ClassContext):

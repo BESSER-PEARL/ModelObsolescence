@@ -2,34 +2,29 @@ grammar Obsolescence;
 
 obsolescence                : model=modelSet ':' obsolescenceDeclaration+;
 
-obsolescenceDeclaration     : ID '(' 'criticality' '=' criticalityType ',' 
-                              'confidence' '=' INT ','
-                              'dateSet' '=' dateObsolescence ')'
+obsolescenceDeclaration     : ID '(' 'criticality' '=' criticalityType ','
+                              'date_set' '=' date ')'
                               (temporalDeclaration | dataDeclaration | internalDeclaration )? 
                               '{'
                               'impacts' ':' impact+
                               '}'
                               ;
 
-impact                      : '->' 'elements' '=' modelElement+
+impact                      : '->' 'elements' '=' modelElement (',' modelElement)*
                                    'impact' '=' INT '%'
-                                   'propagation level' '=' INT
-                                   'propagation impact loss' '=' INT '%'
+                                   ('propagation level' '=' INT)?
+                                   ('propagation impact loss' '=' INT '%')?
                               ;
 
-temporalDeclaration         : 'expires' '=' (fixed=dateReached | periodic=dateRecurring) ;
+temporalDeclaration         : 'expires' '=' (fixed=date | 'every' periodic=period) ;
 
 internalDeclaration         : 'rule' '=' STRING ;
 
-dataDeclaration             : 'discrepancy' '=' INT;
+dataDeclaration             : 'discrepancy' '=' INT '%';
 
-dateReached                 : 'until' until=dateObsolescence ;
+date                        : INT '/' INT '/' INT ;
 
-dateRecurring               : 'every' every=periodObsolescence ;
-
-dateObsolescence            : INT '/' INT '/' INT ;
-
-periodObsolescence          : INT tUnit ;
+period                      : INT tUnit ;
 
 modelElement                : attribute | relation | class | modelSet | functionSet | enumeration ;
 

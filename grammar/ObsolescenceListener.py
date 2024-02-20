@@ -62,39 +62,21 @@ class ObsolescenceListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by ObsolescenceParser#dateReached.
-    def enterDateReached(self, ctx:ObsolescenceParser.DateReachedContext):
+    # Enter a parse tree produced by ObsolescenceParser#date.
+    def enterDate(self, ctx:ObsolescenceParser.DateContext):
         pass
 
-    # Exit a parse tree produced by ObsolescenceParser#dateReached.
-    def exitDateReached(self, ctx:ObsolescenceParser.DateReachedContext):
-        pass
-
-
-    # Enter a parse tree produced by ObsolescenceParser#dateRecurring.
-    def enterDateRecurring(self, ctx:ObsolescenceParser.DateRecurringContext):
-        pass
-
-    # Exit a parse tree produced by ObsolescenceParser#dateRecurring.
-    def exitDateRecurring(self, ctx:ObsolescenceParser.DateRecurringContext):
+    # Exit a parse tree produced by ObsolescenceParser#date.
+    def exitDate(self, ctx:ObsolescenceParser.DateContext):
         pass
 
 
-    # Enter a parse tree produced by ObsolescenceParser#dateObsolescence.
-    def enterDateObsolescence(self, ctx:ObsolescenceParser.DateObsolescenceContext):
+    # Enter a parse tree produced by ObsolescenceParser#period.
+    def enterPeriod(self, ctx:ObsolescenceParser.PeriodContext):
         pass
 
-    # Exit a parse tree produced by ObsolescenceParser#dateObsolescence.
-    def exitDateObsolescence(self, ctx:ObsolescenceParser.DateObsolescenceContext):
-        pass
-
-
-    # Enter a parse tree produced by ObsolescenceParser#periodObsolescence.
-    def enterPeriodObsolescence(self, ctx:ObsolescenceParser.PeriodObsolescenceContext):
-        pass
-
-    # Exit a parse tree produced by ObsolescenceParser#periodObsolescence.
-    def exitPeriodObsolescence(self, ctx:ObsolescenceParser.PeriodObsolescenceContext):
+    # Exit a parse tree produced by ObsolescenceParser#period.
+    def exitPeriod(self, ctx:ObsolescenceParser.PeriodContext):
         pass
 
 
