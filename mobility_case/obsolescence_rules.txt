@@ -1,0 +1,29 @@
+Model mobility_model:
+
+    Req1 (criticality=Error, date_set=9/2/2024) expires = 1/8/2024 {
+        impacts:
+            -> elements = Class Vehicle, Class Segment
+               impact = 100%
+    }
+
+    Req2 (criticality=Warning, date_set=9/2/2024) expires = every 1 m {
+        impacts:
+            -> elements = Class ChargingPoint
+               impact = 10%
+               propagation level = 1
+               propagation impact loss = 50%
+    }
+
+    Req3 (criticality=Error, date_set=9/2/2024) discrepancy = 20% {
+        impacts:
+            -> elements = Class Sensor
+               impact = 100%
+    }
+
+    Req4 (criticality=Warning, date_set=9/2/2024)
+        rule = "self.allClasses()->select(c | c.name.contains('Bus'))->union(self.allAttributes()->select(a | a.name.contains('bus')))"
+    {
+        impacts:
+            -> elements = Class BusStop
+               impact = 100%
+    }
