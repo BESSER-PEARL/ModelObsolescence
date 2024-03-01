@@ -9,7 +9,7 @@ serializer: ModelSerializer = ModelSerializer()
 mobility_model: DomainModel = serializer.load(model_path="mobility.buml")
 
 # Obsolescence declaration
-obs_model: ObsolescenceDeclaration = obsolescence_declaration(obsolescence_rules="obsolescence_rules.txt", target_model=mobility_model)
+obs_model: ObsolescenceDeclaration = obsolescence_declaration(obsolescence_rules="obsolescence_rules.txt", domain_model=mobility_model)
 
 # Extend the model with obsolescence attrs and methods
 startdate = datetime.datetime(2024, 2, 1)

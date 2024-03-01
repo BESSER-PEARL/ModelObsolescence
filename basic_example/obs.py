@@ -13,7 +13,7 @@ import datetime, time
 modeltest: DomainModel = plantuml_to_buml(plantUML_model_path='target_model.plantuml')
 
 # Obsolescence declaration
-obs_model: ObsolescenceDeclaration = obsolescence_declaration(obsolescence_rules="obsolescence_declaration.txt", buml_model=modeltest)
+obs_model: ObsolescenceDeclaration = obsolescence_declaration(obsolescence_rules="obsolescence_declaration.txt", domain_model=modeltest)
 
 # Extend the model with obsolescence attrs and methods
 enable_obsolescence(model=modeltest)
@@ -22,5 +22,5 @@ enable_obsolescence(model=modeltest)
 time.sleep(3)
 check_obsolescence(obsolescence_declaration=obs_model)
 
-time.sleep(3)
+#time.sleep(3)
 check_obsolescence(obsolescence_declaration=obs_model)
