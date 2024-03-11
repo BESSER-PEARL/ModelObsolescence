@@ -4,13 +4,14 @@ obsolescence                : model=modelSet ':' obsolescenceDeclaration+;
 
 obsolescenceDeclaration     : ID '(' 'criticality' '=' criticalityType ','
                               'date_set' '=' date ')'
-                              (temporalDeclaration | dataDeclaration | internalDeclaration )? 
+                              (temporalDeclaration | dataDeclaration | internalDeclaration )?
+                              ('justification' ':' STRING)?
                               '{'
                               'impacts' ':' impact+
                               '}'
                               ;
 
-impact                      : '->' 'elements' '=' modelElement (',' modelElement)*
+impact                      : '->' 'elements' '=' (modelElements | expression )
                                    'impact' '=' INT '%'
                                    ('propagation level' '=' INT)?
                                    ('propagation impact loss' '=' INT '%')?
@@ -25,6 +26,8 @@ dataDeclaration             : 'discrepancy' '=' INT '%';
 date                        : INT '/' INT '/' INT ;
 
 period                      : INT tUnit ;
+
+modelElements               : modelElement (',' modelElement)* ;
 
 modelElement                : attribute | relation | class | modelSet | functionSet | enumeration ;
 
@@ -43,6 +46,8 @@ enumeration                 : 'Enumeration' ID ;
 criticalityType             : 'Warning' | 'Error' ;
 
 tUnit                       : 's' | 'min' | 'h' | 'd' | 'm' | 'y' ;
+
+expression                  : STRING ;
 
 WS                          : [ \t\r\n]+ -> skip ;
 

@@ -21,9 +21,9 @@ Model mobility_model:
     }
 
     Req4 (criticality=Warning, date_set=9/2/2024)
-        rule = "self.allClasses()->select(c | c.name.contains('Bus'))->union(self.allAttributes()->select(a | a.name.contains('bus')))"
+        rule = "isObsolescence(BusStop) == true"
     {
         impacts:
-            -> elements = Class BusStop
+            -> elements = "self.allClasses()->select(c | c.name.contains('Bus'))->union(self.allAttributes()->select(a | a.name.contains('bus')))"
                impact = 100%
     }
