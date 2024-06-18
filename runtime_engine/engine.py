@@ -15,7 +15,7 @@ def check_obsolescence(obsolescence_declaration: ObsolescenceDeclaration, date=d
             check_temporal_periodic(rule, report, date)
     if not os.path.exists("report"):
         os.makedirs("report")
-    report_name = "report/" + datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S").replace(":", "-")
+    report_name = "report/" + datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S").replace(":", "-") + '.pdf'
     report.generate_report(report_name, obsolescence_declaration.name, date=date)
 
 def check_temporal_fixed(rule: FixedObsolescence, report, date):
