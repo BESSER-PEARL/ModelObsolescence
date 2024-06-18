@@ -44,7 +44,7 @@ class Report:
         # Description
         model = Paragraph("<b>Model:</b> " + model_name, styles['Normal'])
         elements.append(model)
-        datetime_str = date.strftime("%Y-%m-%d %H:%M:%S")
+        datetime_str = date.strftime("%B %d, %Y - %H:%M:%S")
         date = Paragraph("<b>Date:</b> " + datetime_str +"<br/><br/>", styles['Normal'])
         elements.append(date)
         
