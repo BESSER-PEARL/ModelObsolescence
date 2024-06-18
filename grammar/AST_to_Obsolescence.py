@@ -1,12 +1,13 @@
+import os
+import datetime
 from antlr4 import CommonTokenStream, FileStream, ParseTreeWalker
 from .ObsolescenceLexer import ObsolescenceLexer
 from .ObsolescenceParser import ObsolescenceParser
 from .ModelCreationListener import ModelCreationListener
 from besser.BUML.metamodel.structural import DomainModel
 from metamodel import enable_obsolescence
-import os
 
-def obsolescence_declaration(obsolescence_rules: str, domain_model: DomainModel):
+def obsolescence_declaration(obsolescence_rules: str, domain_model: DomainModel, date: datetime=datetime.datetime.now()):
     lexer = ObsolescenceLexer(FileStream(obsolescence_rules))
     parser = ObsolescenceParser(CommonTokenStream(lexer))
     parse_tree = parser.obsolescence()
@@ -25,4 +26,7 @@ def obsolescence_declaration(obsolescence_rules: str, domain_model: DomainModel)
         exec(code, namespace)
     function = namespace.get('create_model')
     obs_domain_model = function(domain_model)
+    # Extend the model with obsolescence attrs and methods
+    startdate = datetime.datetime(2024, 2, 1)
+    enable_obsolescence(model=domain_model, date=startdate)
     return obs_domain_model
