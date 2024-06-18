@@ -17,8 +17,8 @@ def create_model(buml_model: DomainModel):
 	Req3 = DataObsolescence(name="Req3", criticality=CriticalType.Error, date_set=datetime.datetime.now(), discrepancy=20, impacts={Req3_impact_1}) 
 
 	# Definition of the <<Req4>> obsolescence rule 
-	Req4_impact_1 = Impact(name="Req4_impact_1", elements={buml_model.get_class_by_name("BusStop")}, impact=100, propagation_level=0, propagation_impact=0) 
-	Req4 = InternalObsolescence(name="Req4", criticality=CriticalType.Warning, date_set=datetime.datetime.now(), rule="self.allClasses()->select(c | c.name.contains('Bus'))->union(self.allAttributes()->select(a | a.name.contains('bus')))", impacts={Req4_impact_1}) 
+	Req4_impact_1 = Impact(name="Req4_impact_1", elements={}, impact=100, propagation_level=0, propagation_impact=0) 
+	Req4 = InternalObsolescence(name="Req4", criticality=CriticalType.Warning, date_set=datetime.datetime.now(), rule="isObsolescence(BusStop) == true", impacts={Req4_impact_1}) 
 
 	# Definition of the Obsolescence Model 
 	obsolescence_model = ObsolescenceRulesModel(name="mobility_model_obs", obs_declarations={Req1, Req2, Req3, Req4})
