@@ -1,11 +1,25 @@
 from besser.BUML.metamodel.structural import NamedElement, DomainModel, Class
 import datetime
 
+class Designer(NamedElement):
+    def __init__(self, name: str, position: str):
+        super.__init__(name)
+        self.position: str = position
+
+    @property
+    def position(self) -> str:
+        return self.__position
+
+    @position.setter
+    def position(self, position: str):
+        self.__position = position
+
 class Change(NamedElement):
-    def __init__(self, name: str, description: str, element: NamedElement, timestamp: datetime = datetime.datetime.now()):
+    def __init__(self, name: str, description: str, element: NamedElement, designer: Designer, timestamp: datetime = datetime.datetime.now()):
         super().__init__(name)
         self.description: str = description
         self.element: NamedElement = element
+        self.designer: Designer = designer
         self.timestamp: datetime = timestamp
 
     @property
@@ -25,6 +39,14 @@ class Change(NamedElement):
         self.__element = element
 
     @property
+    def designer(self) -> Designer:
+        return self.__designer
+    
+    @designer.setter
+    def designer(self, designer: Designer):
+        self.__designer = designer
+
+    @property
     def timestamp(self) -> datetime:
         return self.__timestamp
     
@@ -36,19 +58,19 @@ class Change(NamedElement):
         return f"Change({self.name}, {self.element.name})"
 
 class Revision(NamedElement):
-    def __init__(self, name: str, reviewer: str, comment: str, changes:set[Change] = set(), timestamp: datetime = datetime.datetime.now()):
+    def __init__(self, name: str, reviewer: Designer, comment: str, changes:set[Change] = set(), timestamp: datetime = datetime.datetime.now()):
         super().__init__(name)
-        self.reviewer: str = reviewer
+        self.reviewer: Designer = reviewer
         self.comment: str = comment
         self.changes: set[Change] = changes
         self.timestamp: datetime = timestamp
 
     @property
-    def reviewer(self) -> str:
+    def reviewer(self) -> Designer:
         return self.__reviewer
     
     @reviewer.setter
-    def reviewer(self, reviewer: bool):
+    def reviewer(self, reviewer: Designer):
         self.__reviewer = reviewer
 
     @property
