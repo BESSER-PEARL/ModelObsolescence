@@ -6,7 +6,7 @@ from .ModelCreationListener import ModelCreationListener
 from besser.BUML.metamodel.structural import DomainModel
 import tempfile
 
-def obsolescence_declaration(obsolescence_rules: str, domain_model: DomainModel, delete_temp_file: bool = True):
+def obsolescence_declaration(obsolescence_rules: str, domain_model: DomainModel, delete_temp_model: bool = True):
     lexer = ObsolescenceLexer(FileStream(obsolescence_rules))
     parser = ObsolescenceParser(CommonTokenStream(lexer))
     parse_tree = parser.obsolescence()
@@ -33,6 +33,6 @@ def obsolescence_declaration(obsolescence_rules: str, domain_model: DomainModel,
         exec(code, namespace)
     function = namespace.get('create_model')
     obs_domain_model = function(domain_model)
-    if delete_temp_file == True:
+    if delete_temp_model == True:
         os.remove(temp_file_name)
     return obs_domain_model
