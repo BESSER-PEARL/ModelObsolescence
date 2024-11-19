@@ -1,0 +1,67 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: Modeling the obsolescence of models
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Iván
+    family-names: Alfonso
+    email: ivan.alfonso@list.lu
+    affiliation: Luxembourg Institute of Science and Technology
+    orcid: 'https://orcid.org/0000-0003-3940-0629'
+  - given-names: Jean-Sébastien
+    family-names: Sottet
+    orcid: 'https://orcid.org/0000-0002-3071-6371'
+    affiliation: Luxembourg Institute of Science and Technology
+    email: jean-sebastien.sottet@list.lu
+  - given-names: Pierre
+    email: pierre.brimont@list.lu
+    affiliation: Luxembourg Institute of Science and Technology
+    family-names: Brimont
+  - given-names: Jordi
+    family-names: Cabot
+    orcid: 'https://orcid.org/0000-0003-2418-2489'
+    affiliation: >-
+      Luxembourg Institute of Science and Technology -
+      University of Luxembourg
+    email: jordi.cabot@list.lu
+identifiers:
+  - type: doi
+    value: 10.1007/s10270-024-01236-3
+    description: The paper presenting the solution
+repository-code: 'https://github.com/BESSER-PEARL/ModelObsolescence.git'
+abstract: 'DSL and runtime validation of model obsolescence '
+keywords:
+  - Model obsolescence
+  - Model-driven
+  - Domain-specific language
+license: MIT
+version: 1.0.0
+date-released: '2024-06-28'
+preferred-citation:
+  type: article
+  authors:
+  - family-names: "Alfonso"
+    given-names: "Iván"
+    orcid: "https://orcid.org/0000-0003-3940-0629"
+  - family-names: "Sottet"
+    given-names: "Jean-Sébastien"
+    orcid: "https://orcid.org/0000-0002-3071-6371"
+  - family-names: "Brimont"
+    given-names: "Pierre"
+  - family-names: "Cabot"
+    given-names: "Jordi"
+    orcid: "https://orcid.org/0000-0003-2418-2489"
+  title: "Modeling the obsolescence of models"
+  journal: "Software and Systems Modeling"
+  start: 1
+  end: 15
+  year: 2024
+  publisher:
+    name: Springer
+  url: "http://dx.doi.org/10.1007/s10270-024-01236-3"
+  doi: "10.1007/s10270-024-01236-3"

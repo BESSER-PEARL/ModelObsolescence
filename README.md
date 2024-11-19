@@ -21,6 +21,10 @@ To get started with the mobility example, make sure you're using Python 3.9 or h
 4.  **Run the example**: Navigate to the mobility case directory `cd mobility_case` and run the example script `python mobility.py`
 5.  **Check  the  report**:  You  should  find  the  obsolescence  report  as  a  PDF  file  in  the  `report`  folder.
 
+## Publication
+
+* Alfonso, I., Sottet, J.S., Brimont, P. and Cabot, J., (2024). Modeling the obsolescence of models. Software and Systems Modeling, pp.1-15. https://doi.org/10.1007/s10270-024-01236-3
+
 ## License
 
 This project is licensed under the [MIT](https://mit-license.org/) license.
