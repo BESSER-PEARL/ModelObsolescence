@@ -4,9 +4,10 @@ from besser.utilities import ModelSerializer
 from metamodel import ObsolescenceDeclaration, enable_obsolescence
 from runtime_engine import check_obsolescence
 from grammar import obsolescence_declaration
+from mobility_case.mobility_model import mobility_model
 
-serializer: ModelSerializer = ModelSerializer()
-mobility_model: DomainModel = serializer.load(model_path="mobility.buml")
+#serializer: ModelSerializer = ModelSerializer()
+#mobility_model: DomainModel = serializer.load(model_path="mobility.buml")
 
 # Extend the model with obsolescence attrs and methods
 startdate = datetime.datetime(2024, 2, 1)

@@ -1,12 +1,7 @@
-from besser.BUML.metamodel.structural import DomainModel, Class,  Property, PrimitiveDataType, \
-        Multiplicity, Association, BinaryAssociation, Generalization, EnumerationLiteral, Enumeration
+from besser.BUML.metamodel.structural import DomainModel, Class, Property, PrimitiveDataType, \
+        Multiplicity, Association, BinaryAssociation, Generalization, EnumerationLiteral, Enumeration, \
+        StringType, IntegerType, FloatType, TimeType
 from besser.utilities import ModelSerializer
-
-# Primitive Data Types 
-int_type = PrimitiveDataType("int")
-float_type = PrimitiveDataType("float")
-str_type = PrimitiveDataType("str")
-time_type = PrimitiveDataType("time")
 
 # ChargingState Enum
 charging_state: Enumeration = Enumeration(name="ChargingState", literals={
@@ -27,44 +22,44 @@ station_type: Enumeration = Enumeration(name="StationType", literals={
     EnumerationLiteral(name="supercharger", owner=None)})
 
 # Segment class definition 
-segment_slope: Property = Property(name="slope", type=int_type)
-segment_distance: Property = Property(name="distance", type=float_type)
+segment_slope: Property = Property(name="slope", type=IntegerType)
+segment_distance: Property = Property(name="distance", type=FloatType)
 segment_coating: Property = Property(name="coating", type=coating_type)
-segment_GeoPath: Property = Property(name="GeoPath", type=str_type)
+segment_GeoPath: Property = Property(name="GeoPath", type=StringType)
 segment: Class = Class(name="Segment", attributes={segment_slope, segment_distance, segment_coating, segment_GeoPath})
 
 # BusLine class definition 
-line_lineNumber: Property = Property(name="lineNumber", type=int_type)
+line_lineNumber: Property = Property(name="lineNumber", type=IntegerType)
 busline: Class = Class(name="BusLine", attributes={line_lineNumber})
 
 # ChargingPoint class definition 
-chargingPoint_type: Property = Property(name="type", type=station_type)
-chargingPoint_maxPower: Property = Property(name="maxPower", type=int_type)
+chargingPoIntegerType: Property = Property(name="type", type=station_type)
+chargingPoint_maxPower: Property = Property(name="maxPower", type=IntegerType)
 chargingPoint_state: Property = Property(name="state", type=charging_state)
-chargingPoint: Class = Class(name="ChargingPoint", attributes={chargingPoint_type, chargingPoint_maxPower, chargingPoint_state})
+chargingPoint: Class = Class(name="ChargingPoint", attributes={chargingPoIntegerType, chargingPoint_maxPower, chargingPoint_state})
 
 # BusStop class definition 
 busStop: Class = Class(name="BusStop", attributes=set())
 
 # Road class definition 
-road_name: Property = Property(name="name", type=str_type)
+road_name: Property = Property(name="name", type=StringType)
 road: Class = Class(name="Road", attributes={road_name})
 
 # Vehicle class definition 
-vehicle_brand: Property = Property(name="brand", type=str_type)
+vehicle_brand: Property = Property(name="brand", type=StringType)
 vehicle: Class = Class(name="Vehicle", attributes={vehicle_brand})
 
 # Sensor class definition 
-sensor_temp: Property = Property(name="temperature", type=int_type)
-sensor_time: Property = Property(name="timeReach", type=time_type)
+sensor_temp: Property = Property(name="temperature", type=IntegerType)
+sensor_time: Property = Property(name="timeReach", type=TimeType)
 sensor: Class = Class(name="Sensor", attributes={sensor_temp, sensor_time})
 
 # ElectricBus class definition 
-electricBus_batteryCapability: Property = Property(name="batteryCapability", type=int_type)
+electricBus_batteryCapability: Property = Property(name="batteryCapability", type=IntegerType)
 electricBus: Class = Class(name="ElectricBus", attributes={electricBus_batteryCapability})
 
 # Bus class definition 
-bus_tankCapability: Property = Property(name="tankCapability", type=int_type)
+bus_tankCapability: Property = Property(name="tankCapability", type=IntegerType)
 bus: Class = Class(name="Bus", attributes={bus_tankCapability})
 
 # Point class definition 
@@ -97,11 +92,6 @@ gen_Segment_Road: Generalization = Generalization(general=segment, specific=road
 
 
 # Domain Model
-domain: DomainModel = DomainModel(name="mobility_model", types={segment, busline, chargingPoint, busStop, road, vehicle, electricBus, bus, sensor}, 
+mobility_model: DomainModel = DomainModel(name="mobility_model", types={segment, busline, chargingPoint, busStop, road, vehicle, electricBus, bus, sensor,charging_state, coating_type, station_type}, 
                                   associations={ends, routes, route, is_hosting, sensor_measurments}, 
-                                  generalizations={gen_Vehicle_ElectricBus, gen_Vehicle_Bus, gen_Point_BusStop, gen_Segment_Road},
-                                  enumerations={charging_state, coating_type, station_type})
-
-
-serializer: ModelSerializer = ModelSerializer()
-serializer.dump(model=domain)
+                                  generalizations={gen_Vehicle_ElectricBus, gen_Vehicle_Bus, gen_Point_BusStop, gen_Segment_Road})
